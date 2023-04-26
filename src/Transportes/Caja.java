@@ -22,6 +22,12 @@ public class Caja {
 
     @Override
     public String toString() {
-        return String.format("", null);
+        String unidades; // = unidad == Unidad.cm ? "centímetros": "metros";
+        if (unidad == Unidad.cm) {
+            unidades = "centímetros";
+        } else {
+            unidades = "metros";
+        }
+        return String.format("La caja mide %d de ancho, %d de alto y %d de profundidad (%s)", ancho, alto, fondo, unidades);
     }
 }
