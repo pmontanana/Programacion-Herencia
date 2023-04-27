@@ -1,6 +1,4 @@
-import Transportes.Caja;
-import Transportes.Unidad;
-
+package Transportes;
 public class CajaCarton extends Caja{
 
     public CajaCarton(int ancho, int alto, int fondo) {
