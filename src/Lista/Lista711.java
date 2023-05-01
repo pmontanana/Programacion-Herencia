@@ -67,6 +67,7 @@ public class Lista711 {
     public int numeroElementos() {
         return tabla.length;
     }
+
     @Override
     public String toString() {
         return "Lista: " + Arrays.toString(tabla);

@@ -1,7 +1,6 @@
 package Instrumentos;
 
 import java.util.Arrays;
-import Instrumentos.*;
 
 public abstract class Instrumento {
     protected Nota[] melodia;
