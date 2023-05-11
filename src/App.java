@@ -3,6 +3,7 @@ import Transportes.Caja;
 import Transportes.CajaCarton;
 import Transportes.Unidad;
 import Lista.Cola;
+import Lista.ColaDoble;
 import Lista.Lista711;
 import Lista.Pila;
 
@@ -118,13 +119,37 @@ public class App {
         }
     }  
 
+    public static void pruebaColaDoble(){
+        ColaDoble test1 = new ColaDoble();
+        ColaDoble test2 = new ColaDoble();
+        ColaDoble test3 = new ColaDoble();
+        test1.encolarPrincipio(2);
+        test3.encolarPrincipio(2);
+        test2.encolarPrincipio(3);
+        test1.encolarPrincipio(1);
+        test3.encolarPrincipio(1);
+        // Comprueba el equals
+        System.out.println("test1 != test2 "+(test1.equals(test2)));
+        System.out.println("test1 == test3 "+(test1.equals(test3)));
+        test2.inserta(4);        
+        test1.inserta(3);
+        test2.inserta(5);
+        test1.inserta(4);
+        test2.inserta(6);
+        System.out.println("Contenido de test1");
+        while (!test1.esVacia()) {
+            System.out.println(test1.desencolarFinal());
+        }
+    }  
+    
 
     public static void main(String[] args) {
         //pruebaInstrumentos();
         //pruebaCajas();
         //pruebaCajasCarton();
-        // pruebaLista();
-        // pruebaCola();
-        pruebaPila();
+        //pruebaLista();
+        //pruebaCola();
+        //pruebaPila();
+        pruebaColaDoble();
     }
 }
