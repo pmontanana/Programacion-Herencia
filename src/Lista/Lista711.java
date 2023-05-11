@@ -2,6 +2,7 @@ package Lista;
 
 import java.util.*;
 
+
 public class Lista711 {
     Integer[] tabla;
 
@@ -45,6 +46,10 @@ public class Lista711 {
         return eliminado;
     }
 
+    public boolean esVacia(){
+        return tabla.length == 0;
+    }
+
     public Integer get(int indice) {
         Integer resultado = null;
         if (indice >= 0 && indice < tabla.length) {
@@ -52,6 +57,7 @@ public class Lista711 {
         }
         return resultado;
     }
+
 
     public int buscar(Integer claveBusqueda) {
         int indice = -1;
@@ -68,9 +74,20 @@ public class Lista711 {
         return tabla.length;
     }
 
-    @Override
     public String toString() {
         return "Lista: " + Arrays.toString(tabla);
+    }
+
+    public boolean equals(Lista711 temp){
+        if (tabla.length != temp.numeroElementos()){
+            return false;
+        }
+        for (int i = 0; i< tabla.length; i++) {
+            if (tabla[i] != temp.get(i)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

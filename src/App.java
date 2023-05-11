@@ -2,7 +2,9 @@ import Instrumentos.*;
 import Transportes.Caja;
 import Transportes.CajaCarton;
 import Transportes.Unidad;
+import Lista.Cola;
 import Lista.Lista711;
+import Lista.Pila;
 
 public class App {
 
@@ -33,6 +35,7 @@ public class App {
 
         Lista711 test1 = new Lista711();
         Lista711 test2 = new Lista711();
+        Lista711 test3  = new Lista711();
         test1.insertarFinal(4);
         test1.insertarFinal(5);
         test1.insertarFinal(6);
@@ -54,13 +57,74 @@ public class App {
         System.out.println(test2);
         test1.insertarFinal(test2);
         System.out.println(test1);
+        System.out.println("Prueba equals");
+        System.out.println("test1 == test2 "+(test1.equals(test2)));
+        test3.insertarFinal(1);
+        test3.insertarFinal(2);
+        test3.insertarFinal(3);
+        test3.insertarFinal(4);
+        test3.insertarFinal(5);
+        test3.insertarFinal(6);
+        test3.insertarFinal(test2);
+        System.out.println(test1);
+        System.out.println(test3);
+        System.out.println("test1 == test3 "+(test1.equals(test3)));
+        
 
     }
+
+    public static void pruebaCola(){
+        Cola test1 = new Cola();
+        Cola test2 = new Cola();
+        Cola test3 = new Cola();
+        test1.inserta(1);
+        test3.inserta(1);
+        test2.inserta(3);
+        test1.inserta(2);
+        test3.inserta(2);
+        // Comprueba el equals
+        System.out.println("test1 != test2 "+(test1.equals(test2)));
+        System.out.println("test1 == test3 "+(test1.equals(test3)));
+        test2.inserta(4);        
+        test1.inserta(3);
+        test2.inserta(5);
+        test1.inserta(4);
+        test2.inserta(6);
+        System.out.println("Contenido de test1");
+        while (!test1.esVacia()) {
+            System.out.println(test1.extrae());
+        }
+    }  
+    public static void pruebaPila(){
+        Pila test1 = new Pila();
+        Pila test2 = new Pila();
+        Pila test3 = new Pila();
+        test1.push(1);
+        test3.push(1);
+        test2.push(3);
+        test1.push(2);
+        test3.push(2);
+        // Comprueba el equals
+        System.out.println("test1 != test2 "+(test1.equals(test2)));
+        System.out.println("test1 == test3 "+(test1.equals(test3)));
+        test2.push(4);        
+        test1.push(3);
+        test2.push(5);
+        test1.push(4);
+        test2.push(6);
+        System.out.println("Contenido de test1");
+        while (!test1.esVacia()) {
+            System.out.println(test1.pop());
+        }
+    }  
+
 
     public static void main(String[] args) {
         //pruebaInstrumentos();
         //pruebaCajas();
         //pruebaCajasCarton();
-        pruebaLista();
+        // pruebaLista();
+        // pruebaCola();
+        pruebaPila();
     }
 }
