@@ -1,11 +1,6 @@
 import Instrumentos.*;
-import Transportes.Caja;
-import Transportes.CajaCarton;
-import Transportes.Unidad;
-import Lista.Cola;
-import Lista.ColaDoble;
-import Lista.Lista711;
-import Lista.Pila;
+import Transportes.*;
+import Lista.*;
 
 public class App {
 
@@ -142,6 +137,26 @@ public class App {
         }
     }  
     
+    public static void pruebaConjunto(){
+        Conjunto test1 = new Conjunto();
+        Conjunto test2 = new Conjunto();
+        Conjunto test3 = new Conjunto();
+        test1.insertarPrincipio(2);
+        test1.insertarPrincipio(2);
+        test1.insertarPrincipio(3);
+        test2.insertarPrincipio(5);
+        test2.insertarPrincipio(6);
+        test3.insertarPrincipio(2);
+        test3.insertarPrincipio(3);
+        System.out.println("Contenido test 1");
+        System.out.println(test1);
+        System.out.println("Contenido test 2");
+        System.out.println(test2);
+        System.out.println("Contenido test 3");
+        System.out.println(test3);
+        System.out.println("test1 != test2 "+(test1.equals(test2)));
+        System.out.println("test1 == test3 "+(test1.equals(test3)));
+    }
 
     public static void main(String[] args) {
         //pruebaInstrumentos();
@@ -150,6 +165,7 @@ public class App {
         //pruebaLista();
         //pruebaCola();
         //pruebaPila();
-        pruebaColaDoble();
+        //pruebaColaDoble();
+        pruebaConjunto();
     }
 }
