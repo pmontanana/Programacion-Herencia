@@ -166,6 +166,6 @@ public class App {
         //pruebaCola();
         //pruebaPila();
         //pruebaColaDoble();
-        pruebaConjunto();
+        //pruebaConjunto();
     }
 }
