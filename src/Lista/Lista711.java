@@ -90,4 +90,31 @@ public class Lista711 {
         return true;
     }
 
+    public static boolean esNumero (Object temp){
+        return temp instanceof Number;
+    }
+
+    public boolean sumar(Object temp1, Object temp2){
+        if (temp1 instanceof String && temp2 instanceof String) {
+            String concatenation = (String) temp1 + (String) temp2;
+            System.out.println("Concatenación: " + concatenation);
+            return false;
+        } else if (temp1 instanceof Number && temp2 instanceof Number) {
+            double suma = ((Number) temp1).doubleValue() + ((Number) temp2).doubleValue();
+            System.out.println("Suma numérica: " + suma);
+            return true;
+        } else {
+            System.out.println("No sumables");
+            return false;
+        }
+    }
+
+    class GarbageObject {
+        @Override
+        protected void finalize() throws Throwable {
+            System.out.println("El objeto está siendo recolectado por el recolector de basura: " + this);
+        }
+    }
+
+
 }
