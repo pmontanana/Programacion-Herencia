@@ -158,6 +158,19 @@ public class App {
         System.out.println("test1 == test3 "+(test1.equals(test3)));
     }
 
+    public static void test() {
+        GarbageObject testx = new GarbageObject();
+    }
+
+    public static void pruebaRecolector(){
+        GarbageObject test1 = new GarbageObject();
+        test();
+        for (int i = 0; i < 5;i++){
+            GarbageObject test3 = new GarbageObject();
+            System.out.println(i);
+        }
+    }
+
     public static void main(String[] args) {
         //pruebaInstrumentos();
         //pruebaCajas();
@@ -167,5 +180,6 @@ public class App {
         //pruebaPila();
         //pruebaColaDoble();
         //pruebaConjunto();
+        pruebaRecolector();
     }
 }

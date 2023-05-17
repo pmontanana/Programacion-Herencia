@@ -109,12 +109,4 @@ public class Lista711 {
         }
     }
 
-    class GarbageObject {
-        @Override
-        protected void finalize() throws Throwable {
-            System.out.println("El objeto está siendo recolectado por el recolector de basura: " + this);
-        }
-    }
-
-
 }
